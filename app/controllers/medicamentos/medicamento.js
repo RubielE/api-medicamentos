@@ -39,6 +39,13 @@ module.exports = {
                         data: result
                     });
                 }
+            }else {
+                res.status(400).send({
+                        title: "Error",
+                        class: "warning",
+                        mensaje: "Error al intentar registrar los datos",
+                        data: error
+                    });
             }
         });
     },
